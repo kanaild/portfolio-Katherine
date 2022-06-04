@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;600;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+
+body {
+    background-color: #F5F5F5;
+}
+
+.top-menu ul{
+    list-style: none;
+    text-align: center;
+}
+
+.top-menu li{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5em;
+    margin: 2em 3em 1em 1em;
+    display: inline-block;
+}
+
+.top-menu li a{
+    text-decoration: none;
+    color: #588157;
+}
+
+.top-menu ul #h, .top-menu ul #w a{
+    font-weight: 700;
+    color: #344E41;
+}
+
+.title h1{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.title span{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*Centrar contenedores*/
+.projects{
+    display: flex;
+    justify-content: center;
+}
+
+.project-card{
+    width: 18em;
+    height: 25em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #344E41;
+    margin: 0 5em 0 1.5em;
+    /*box-shadow: 0px 5px 8px #888888;*/
+}
+.project-card img{
+    width:100%;
+    height:auto;
+    /*
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    */
+    border: none;
+}
+
+p{
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1em;
+    padding: 0  2em 0 2em;
+    color: #EDF2F4;
+    margin-bottom: 2em;
+}
+
+.project-card a{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #000000;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    margin-left: 2em;
+}
