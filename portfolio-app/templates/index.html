@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!--Here goes the title of the page -->
+<title>Portfolio MLH</title>
+<link rel="stylesheet" href='./static/css/index.css'>
+{% endblock %}
+
+{% block body %}
+<!--Here goes the body of the page -->
+
+<div class="top-menu">
+    <ul>
+        <li id="h"><a href="{{ url_for('index')}}">home</a></li>
+        <li><a href="{{ url_for('aboutme')}}">about</a></li>
+        <li><a href="{{ url_for('work')}}">work</a></li>
+        <li><a href="">hobbies</a></li>
+        <li><a href="">education</a></li>
+        <li><a href="">traveling</a></li>
+    </ul>
+</div>
+
+<div class="home" id="home">
+
+
+     <div class="home-content">
+        <div class="home-left-text">
+            <h1>Hey!<br><span> I'm David Pantoja 💻</span></h1>
+            <h2>Software engineer that loves taking<br>ideation to implementation and<br>leveraging the latest in technology to<br>business.</h2>
+            <a href="{{ url_for('work')}}">see my work <img src="./static/img/code_icon.png"></a>
+        </div>
+        
+        <div class="home-profile-image">
+            <img id="profile-image" src="./static/img/david_profile.jpg">
+        </div>
+     </div>
+    
+
+</div>
+{% endblock %}
