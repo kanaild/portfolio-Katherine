@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+{% block head %}
+<!--Here goes the title of the page -->
+<title>Portfolio MLH</title>
+<link rel="stylesheet" href='./static/css/index.css'>
+{% endblock %}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+{% block body %}
+<!--Here goes the body of the page -->
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
-</head>
+<div class="top-menu">
+    <ul>
+        <li id="h"><a href="{{ url_for('index')}}">home</a></li>
+        <li><a href="{{ url_for('aboutme')}}">about</a></li>
+        <li><a href="{{ url_for('work')}}">work</a></li>
+        <li><a href="">hobbies</a></li>
+        <li><a href="">education</a></li>
+        <li><a href="">traveling</a></li>
+    </ul>
+</div>
 
-<body>
-    <header class="nav-bar">
-        <div class="nav-content">
-            <a href="/">
-                <div class="nav-logo">
-                    <img src="./static/img/logo.svg" />
-                </div>
-            </a>
+<div class="home" id="home">
+
+
+     <div class="home-content">
+        <div class="home-left-text">
+            <h1>Hey!<br><span> I'm David Pantoja 💻</span></h1>
+            <h2>Software engineer that loves taking<br>ideation to implementation and<br>leveraging the latest in technology to<br>business.</h2>
+            <a href="{{ url_for('work')}}">see my work <img src="./static/img/code_icon.png"></a>
         </div>
-    </header>
-
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+        
+        <div class="home-profile-image">
+            <img id="profile-image" src="./static/img/david_profile.jpg">
         </div>
-        <h1>{{ title }}</h1>
-    </div>
-</body>
-</html>
+     </div>
+    
+
+</div>
+{% endblock %}
