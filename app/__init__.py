@@ -17,3 +17,7 @@ def work():
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html')
+
+@app.route('/education')
+def education():
+    return render_template('education.html')
