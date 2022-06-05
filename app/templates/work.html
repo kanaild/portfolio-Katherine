@@ -26,29 +26,15 @@
 
 <div class="projects">
     
-    <div class="project-card">
-        <img src="./static/img/empty.jpeg">
-        <div class="project-descr">
-            <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Aliquam scelerisque dapibus vulputate</p>
+    {% for experience in work %}
+        <div class="project-card">
+            <img src="{{ experience.picture }}">
+            <div class="project-descr">
+                <p> {{ experience.description }}</p>
+            </div>
+            <a href="{{ experience.link }}">see on Github</a>
         </div>
-        <a href="">see on Github</a>
-    </div>
-
-    <div class="project-card">
-        <img src="./static/img/empty.jpeg">
-        <div class="project-descr">
-            <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Aliquam scelerisque dapibus vulputate</p>
-        </div>
-        <a href="">see on Github</a>
-    </div>
-
-    <div class="project-card">
-        <img src="./static/img/empty.jpeg">
-        <div class="project-descr">
-            <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Aliquam scelerisque dapibus vulputate</p>
-        </div>
-        <a href="">see on Github</a>
-    </div>
+    {% endfor %}
 
 </div>
 {% endblock %}
