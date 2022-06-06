@@ -21,3 +21,11 @@ def aboutme():
 @app.route('/work')
 def work():
     return render_template('work.html', work = data)
+
+@app.route('/hobbies')
+def hobbies():
+    return render_template('hobbies.html')
+
+@app.route('/education')
+def education():
+    return render_template('education.html')

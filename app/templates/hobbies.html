@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block head %}
+<!--Here goes the title of the page -->
+<title>Portfolio MLH</title>
+<link rel="stylesheet" href='./static/css/hobbies.css'>
+{% endblock %}
+
+{% block body %}
+<div class="top-menu">
+    <ul>
+        <li><a href="{{ url_for('index')}}">home</a></li>
+        <li><a href="{{ url_for('aboutme')}}">about</a></li>
+        <li><a href="{{ url_for('work')}}">work</a></li>
+        <li id = "w"><a href="{{ url_for('hobbies')}}">hobbies</a></li>
+        <li><a href="{{ url_for('education')}}">education</a></li>
+        <li><a href="">traveling</a></li> 
+    </ul>
+</div>
+
+<div class="home" id="home">
+    <div class="home-content">
+        <div class="home-header">
+            <h1>Things I do<span> in my free time🕑</span></h1>
+            <h2> after a day of squashing bugs, my interests include </h2>
+        </div>
+     </div>
+   
+
+</div>
+
+<div class="interests">
+    <div class="hobby">
+        <img src="./static/img/traveling-pic.jpg">
+        <h1>Traveling</h1>
+    </div>
+
+    <div class="hobby">
+        <img src="./static/img/music.jpg">
+        <h1>Music</h1>
+    </div>
+
+    <div class="hobby">
+        <img src="./static/img/fitness.jpg">
+        <h1>Fitness</h1>
+    </div>
+
+    <div class="hobby">
+        <img src="./static/img/cooking.jpg">
+        <h1>Cooking</h1>
+    </div>
+
+</div>
+{% endblock %}
