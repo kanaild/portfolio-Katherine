@@ -3,7 +3,7 @@
 {% block head %}
 <!--Here goes the title of the page -->
 <title>Portfolio MLH</title>
-<link rel="stylesheet" href='./static/css/index.css'>
+<link rel="stylesheet" href='./static/css/travel.css'>
 {% endblock %}
 
 {% block body %}
@@ -20,20 +20,25 @@
     </ul>
 </div>
 
-<div class="home" id="home">
+<div class="title">
+    <h1>Some places<span> I've been to</span> </h1>
+</div>
 
+<div class="map" id="map">
 
-     <div class="home-content">
-        <div class="home-left-text">
-            <h1>Hey!<br><span> I'm David Pantoja 💻</span></h1>
-            <h2>Software engineer that loves taking<br>ideation to implementation and<br>leveraging the latest in technology to<br>business.</h2>
-            <a href="{{ url_for('work')}}">see my work <img src="./static/img/code_icon.png"></a>
-        </div>
-        
-        <div class="home-profile-image">
-            <img id="profile-image" src="./static/img/david_profile.jpg">
-        </div>
-     </div>
+    <div class="subtitle">
+        <h1>States<span> I've been to</span> </h1>
+    </div>
+    <div class="map-profile-image">
+        <img id="states-image" src="./static/img/states.png">
+    </div>
+
+    <div class="subtitle">
+        <h1>Countires<span> I've been to</span> </h1>
+    </div>
+    <div class="map-profile-image">
+        <img id="countries-image" src="./static/img/countries.png">
+    </div>    
     
 
 </div>

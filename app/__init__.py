@@ -39,3 +39,7 @@ def hobbies():
 @app.route('/education')
 def education():
     return render_template('education.html', education = education_d)
+
+@app.route('/travel')
+def travel():
+    return render_template('travel.html')
