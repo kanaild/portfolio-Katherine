@@ -20,7 +20,7 @@
 </div>
 
 <div class="title">
-    <h1>Some projects<span> I've worked in ⛏ </span> </h1>
+    <h1>Some projects<br><span> I've worked in ⛏ </span> </h1>
 </div>
 
 
@@ -28,11 +28,16 @@
     
     {% for experience in work %}
         <div class="project-card">
-            <img src="{{ experience.picture }}">
-            <div class="project-descr">
-                <p> {{ experience.description }}</p>
+            <div class="image-container">
+                <img src="{{ experience.picture }}">
             </div>
-            <a href="{{ experience.link }}">see on Github</a>
+            <div class="project-descr">
+                <p>{{ experience.description }}</p>
+            </div>
+            <div class="button-github">
+                <a href="{{ experience.link }}">see on Github</a>
+            </div>
+            
         </div>
     {% endfor %}
 
