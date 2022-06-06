@@ -21,10 +21,9 @@
     <div class="home-content">
         <div class="home-header">
             <h1>Part of my <span>education📚</span></h1>
-            <h2><span>University of California Santacruz</span><br>Bachelor of Science - BS, Computer Science</h2>
-            <h2><span>Foothill College</span><br>Grade: 4.0</h2>
-            <h2><span>West Hills College Coalinga</span><br>Grade: 4.0</h2>
-            <h2><span>Troy High School </span><br>Grade: 4.5/4 W</h2>
+            {% for experience in education %}
+                <h2><span>{{ experience.name }}</span><br>{{ experience.description }}</h2>
+            {% endfor %}
 
 
         </div>

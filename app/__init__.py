@@ -4,11 +4,21 @@ from jinja2 import Environment, FileSystemLoader
 
 app = Flask(__name__)
 
-f = open('app/data/work.json')
-data = json.load(f)
-f.close()
-work = data.copy()
-print(work)
+a = open('app/data/work.json')
+work_data = json.load(a)
+a.close()
+work_d = work_data.copy()
+
+b = open('app/data/hobbies.json')
+hobby_data = json.load(b)
+b.close()
+hobbies_d = hobby_data.copy()
+
+c = open('app/data/education.json')
+education_data = json.load(c)
+c.close()
+education_d = education_data.copy()
+
 
 @app.route('/')
 def index():
@@ -20,12 +30,12 @@ def aboutme():
 
 @app.route('/work')
 def work():
-    return render_template('work.html', work = data)
+    return render_template('work.html', work = work_d)
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html')
+    return render_template('hobbies.html', hobbies = hobbies_d)
 
 @app.route('/education')
 def education():
-    return render_template('education.html')
+    return render_template('education.html', education = education_d)

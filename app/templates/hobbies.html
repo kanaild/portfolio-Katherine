@@ -29,25 +29,13 @@
 </div>
 
 <div class="interests">
-    <div class="hobby">
-        <img src="./static/img/traveling-pic.jpg">
-        <h1>Traveling</h1>
-    </div>
 
-    <div class="hobby">
-        <img src="./static/img/music.jpg">
-        <h1>Music</h1>
-    </div>
-
-    <div class="hobby">
-        <img src="./static/img/fitness.jpg">
-        <h1>Fitness</h1>
-    </div>
-
-    <div class="hobby">
-        <img src="./static/img/cooking.jpg">
-        <h1>Cooking</h1>
-    </div>
+    {% for hobby in hobbies%}
+        <div class="hobby">
+            <img src="{{ hobby.picture }}">
+            <h1>{{ hobby.description }}</h1>
+        </div>
+    {% endfor %}
 
 </div>
 {% endblock %}
