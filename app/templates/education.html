@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block head %}
+<!--Here goes the title of the page -->
+<title>Portfolio MLH</title>
+<link rel="stylesheet" href='./static/css/education.css'>
+{% endblock %}
+
+{% block body %}
+<div class="top-menu">
+    <ul>
+        <li><a href="{{ url_for('index')}}">home</a></li>
+        <li><a href="{{ url_for('aboutme')}}">about</a></li>
+        <li><a href="{{ url_for('work')}}">work</a></li>
+        <li><a href="{{ url_for('hobbies')}}">hobbies</a></li>
+        <li id="w"><a href="{{url_for('education')}}">education</a></li>
+        <li><a href="">traveling</a></li> 
+    </ul>
+</div>
+
+<div class="home" id="home">
+    <div class="home-content">
+        <div class="home-header">
+            <h1>Part of my <span>education📚</span></h1>
+            <h2><span>University of California Santacruz</span><br>Bachelor of Science - BS, Computer Science</h2>
+            <h2><span>Foothill College</span><br>Grade: 4.0</h2>
+            <h2><span>West Hills College Coalinga</span><br>Grade: 4.0</h2>
+            <h2><span>Troy High School </span><br>Grade: 4.5/4 W</h2>
+
+
+        </div>
+     </div>
+</div>
+{% endblock %}
