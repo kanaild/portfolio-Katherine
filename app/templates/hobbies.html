@@ -17,14 +17,11 @@
     </ul>
 </div>
 
-<div class="home" id="home">
-    <div class="home-content">
-        <div class="home-header">
-            <h1>Things I do<span> in my free time🕑</span></h1>
-            <h2> after a day of squashing bugs, my interests include </h2>
-        </div>
-     </div>
-   
+<div class="home">
+    <div class="home-header">
+        <h1>Things I do<span> in my free time 🕑</span></h1>
+        <h2> after a day of squashing bugs, my interests include </h2>
+    </div>
 
 </div>
 
@@ -33,7 +30,11 @@
     {% for hobby in hobbies%}
         <div class="hobby">
             <img src="{{ hobby.picture }}">
-            <h1>{{ hobby.description }}</h1>
+
+            <div class="hobby-descr">
+                <p>{{ hobby.description }}</p>
+            </div>
+            
         </div>
     {% endfor %}
 

@@ -31,12 +31,12 @@ body {
 
 /*Espacio parea centrar el contenido*/
 .aboutMe{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .aboutMe-left-text{
     padding: 1em 2em 2em 5em;
+    display: inline-block;
 }
 
 .aboutMe-left-text h1 {
@@ -71,4 +71,5 @@ body {
 
 .aboutMe-gallery{
     padding: 1em 2em 2em 5em;
+    display: inline-block;
 }
