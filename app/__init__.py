@@ -62,7 +62,7 @@ print(mydb)
 class TimelinePost(Model):
 	name = CharField()
 	email = CharField()
-	context = TextField()
+	content = TextField()
 	created_at = DateTimeField(default=datetime.datetime.now)
 
 	class Meta:
