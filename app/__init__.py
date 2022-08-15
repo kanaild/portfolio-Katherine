@@ -53,7 +53,7 @@ def travel():
 
 if os.getenv("TESTING") == "true":
 	print("Running in test mode")
-	db= SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+	mydb= SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 
 else:
 	mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
