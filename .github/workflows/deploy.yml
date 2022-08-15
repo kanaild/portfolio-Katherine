@@ -28,6 +28,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
       - name: Deploy Site
-        run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd && ./redeploy-site.sh'
+        run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd && chmod +x redeploy-site.sh && ./redeploy-site.sh'
  
  
