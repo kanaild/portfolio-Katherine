@@ -31,10 +31,5 @@ jobs:
         run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
       - name: Deploy site
         run: |
-          ls
-          pwd
-          cd ..
-          pwd
-          ls
           ./redeploy-site.sh
  
