@@ -75,18 +75,22 @@ mydb.create_tables([TimelinePost])
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-	try:
-		name = request.form['name']
-		if name==NULL or name=="":
-			return Response(render_template('error_message.html',error="name"),400)
-	except:
-		return Response(render_template('error_messsage.html',error="name"),400)
 
+	name = request.form.get('name')
 	email = request.form['email']
 	content = request.form['content']
-	timeline_post = TimelinePost.create(name=name,email=email,content=content)
-	model_to_dict(timeline_post)
-	return redirect("/timeline",code=302)
+	if name=="" or name==None:
+		return "Invalid name", 400
+		
+	elif '@' not in email:
+		return "Invalid email", 400
+
+	elif content == "":
+		return "Invalid content", 400
+	else:
+		timeline_post = TimelinePost.create(name=name,email=email,content=content)
+	
+		return model_to_dict(timeline_post)
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
