@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response, redirect
 import datetime
 from peewee import *
 import os
@@ -6,6 +6,7 @@ import json
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader
 from playhouse.shortcuts import model_to_dict
+from pymysql import NULL
 
 load_dotenv()
 app = Flask(__name__)
@@ -74,11 +75,18 @@ mydb.create_tables([TimelinePost])
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-	name = request.form['name']
+	try:
+		name = request.form['name']
+		if name==NULL or name=="":
+			return Response(render_template('error_message.html',error="name"),400)
+	except:
+		return Response(render_template('error_messsage.html',error="name"),400)
+
 	email = request.form['email']
 	content = request.form['content']
 	timeline_post = TimelinePost.create(name=name,email=email,content=content)
-	return model_to_dict(timeline_post)
+	model_to_dict(timeline_post)
+	return redirect("/timeline",code=302)
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
